@@ -237,3 +237,5 @@ const bgColorPink = changeColor("#ff7eb6");
 document.querySelector(`#blue`).addEventListener("click", bgColorBlue);
 document.querySelector(`#green`).addEventListener("click", bgColorGreen);
 document.querySelector(`#pink`).addEventListener("click", bgColorPink);
+// you'll be using the array reduce function to calculate the total bill from a trip to the coffee shop with your friends. Each person has ordered some number of coffees and you offer to pay the entire bill. Given an array of integers where each value is greater than zero, calculate the total price of all coffees. Each coffee costs $1.25. You should return your answer in the following format. The total bill is, followed by the total. You should use template literals for your return value. Template literals also known as template strings allow you to combine JavaScript expressions and strings into one. Where you previously had to use the plus sign to concatenate strings with values you can now use back ticks. And where you need to evaluate variable or expression, you can surround it with a dollar sign and curly brackets.
+`The Total bill is ${total}.`; //template string
