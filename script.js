@@ -239,10 +239,12 @@ document.querySelector(`#green`).addEventListener("click", bgColorGreen);
 document.querySelector(`#pink`).addEventListener("click", bgColorPink);
 // you'll be using the array reduce function to calculate the total bill from a trip to the coffee shop with your friends. Each person has ordered some number of coffees and you offer to pay the entire bill. Given an array of integers where each value is greater than zero, calculate the total price of all coffees. Each coffee costs $1.25. You should return your answer in the following format. The total bill is, followed by the total. You should use template literals for your return value. Template literals also known as template strings allow you to combine JavaScript expressions and strings into one. Where you previously had to use the plus sign to concatenate strings with values you can now use back ticks. And where you need to evaluate variable or expression, you can surround it with a dollar sign and curly brackets.
 
-function coffeeDate(coffeeArr) {
-  let coffeeSum = coffeeArr.reduce(
-    (totalCoffees, numCoffees) => (totalCoffees += numCoffees)
-  );//array reduce method
-  return `The total bill is $${coffeeSum * 1.25}`; //template string
-}
-console.log(coffeeDate([2, 5, 7, 1, 4]));
+// function coffeeDate(coffeeArr) {
+//   let coffeeSum = coffeeArr.reduce(
+//     (totalCoffees, numCoffees) => (totalCoffees += numCoffees)
+//   );//array reduce method
+//   return `The total bill is $${coffeeSum * 1.25}`; //template string
+// }
+// console.log(coffeeDate([2, 5, 7, 1, 4]));
+
+//You're in charge of building a website for a food truck festival. Each vendor has a menu. And some vendors might be serving the same item. Given an array of food trick menus, where each menu is an array. Return one master menu which contains all food items that will be served at the festival without duplicates. We'll take this unique menu and use DOM manipulation to create an unordered list containing these unique menu items. You should have an unordered list with an ID of combined-menu in your HTML that you can use to append list node children to.
