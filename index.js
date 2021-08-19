@@ -55,6 +55,53 @@
 // HungerGames.sell(17);
 // console.log(HungerGames.getAvailablity());
 
+// addition to prevChallenge
+//this challenge we'll use inheritance to create a variation on our Book class. Your goal is to create a TechnicalBook class that inherits from the Book class in the previous challenge. This class will also take a title, author, ISBN, and number of copies, but will take a fifth argument, an edition. The TechnicalBook class will also provide a getEdition function which returns the following string. The current version of this book is, followed by the book's edition. You should use a template literal for this phrase.
+class Book {
+  constructor(title, author, ISBN, numCopies) {
+    this.title = title;
+    this.author = author;
+    this.ISBN = ISBN;
+    this.numCopies = numCopies;
+  }
+  get availablity() {
+    return this.getAvailablity();
+  }
+  getAvailablity = function () {
+    if (this.numCopies == 0) {
+      return "Out of Stock";
+    } else if (this.numCopies < 10) {
+      return "Low stock";
+    }
+    return "In stock";
+  };
+  sell(numCopiesSold = 10) {
+    this.numCopies -= numCopiesSold;
+  }
+  restock(numCopiesStocked = 5) {
+    this.numCopies += numCopiesStocked;
+  }
+}
+const HungerGames = new Book("Hunger Games", "Suzanne Collins", 123321, 5);
+
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition) {
+    super(title, author, ISBN, numCopies);
+    this.edition = edition;
+  }
+  getEdition() {
+    return `The current version of this book is ${this.edition}.`;
+  }
+}
+const CrackingTheCodingInterview = new TechnicalBook(
+  "Cracking The Coding Interview",
+  "Gayle Laackmann McDowell",
+  1209115,
+  7,
+  "2.3"
+);
+console.log(CrackingTheCodingInterview.availablity);
+console.log(CrackingTheCodingInterview.getEdition());
 //create a movie object that takes in five arguments. Title, director, genre, release year and rating. The movie prototype should have a function called get overview, which logs the following overview for each film. Movie, a genre film directed by director was released in release here. It received a rating of rating. You can use either class or function syntax to create your prototype. Once you create your movie object, create a few movies to test it out.
 // //function solution
 // function Movie(title, director, genre, releaseYear, rating){
@@ -90,39 +137,39 @@
 // console.log(Spiderman.getOverview);
 // console.logg(Batman.getOverview);
 //In this challenge you're planning the menu for an Italian dinner. Some of your guests are vegetarian and you need to create a list of vegetarian menu items for them. Given an array of Italian dishes, create an unordered list of all vegetarian dinner options. Each menu item is an object containing the dish name and a Boolean variable that indicates whether the dish is vegetarian. You should dynamically generate the list items in the DOM from the array of vegetarian items.
-const dishes = [
-  {
-    name: "Eggplant Parmesan",
-    vegetarian: true,
-  },
-  {
-    name: "Spaghetti & Meatballs",
-    vegetarian: false,
-  },
-];
-function vegetarianMenu(menu) {
-  const menuNode = document.querySelector("#menu");
-  const vegetarianOptions = menu.filter(
-    (option) => option.isVegetarian == true
-  );
-  vegetarianOptions.forEach((option) => {
-    let dish = document.createElement("li");
-    dish.textContent = option.name;
-    menuNode.appendChild(dish);
-  });
-  const menu = [
-    {
-      name: "Eggplant Parmesan",
-      vegetarian: true,
-    }, 
-    {
-      name: "Spaghetti & Meatballs",
-      vegetarian: false,
-    },
-    {
-      name: "Stuffed shells",
-      vegetarian: false,
-    },
-  ];
-}
-vegetarianMenu(menu);
+// const dishes = [
+//   {
+//     name: "Eggplant Parmesan",
+//     vegetarian: true,
+//   },
+//   {
+//     name: "Spaghetti & Meatballs",
+//     vegetarian: false,
+//   },
+// ];
+// function vegetarianMenu(menu) {
+//   const menuNode = document.querySelector("#menu");
+//   const vegetarianOptions = menu.filter(
+//     (option) => option.isVegetarian == true
+//   );
+//   vegetarianOptions.forEach((option) => {
+//     let dish = document.createElement("li");
+//     dish.textContent = option.name;
+//     menuNode.appendChild(dish);
+//   });
+//   const menu = [
+//     {
+//       name: "Eggplant Parmesan",
+//       vegetarian: true,
+//     },
+//     {
+//       name: "Spaghetti & Meatballs",
+//       vegetarian: false,
+//     },
+//     {
+//       name: "Stuffed shells",
+//       vegetarian: false,
+//     },
+//   ];
+// }
+// vegetarianMenu(menu);
