@@ -187,12 +187,29 @@
 // console.log(user.password);
 
 //in this challenge, you'll create a ticking clock in the document body. The index.html file contains a div with an ID of clock. Using callback functions and DOM manipulation, output a ticking digital clock which displays the current hours, minutes, and seconds.
-function clock() {
-  const clockNode = document.querySelector("#clock");
-  return setInterval(() => {
-    let date = new Date();
-    let tick = date.toLocaleDateString();
-    clockNode.textConect = tick;
-  }, 1000);
+// function clock() {
+//   const clockNode = document.querySelector("#clock");
+//   return setInterval(() => {
+//     let date = new Date();
+//     let tick = date.toLocaleDateString();
+//     clockNode.textConect = tick;
+//   }, 1000);
+// }
+// clock();
+//For this challenge, you'll use array and object de-structuring to return a list of students. Create a function called get students, which takes one argument, Classroom classroom will contain a bullion value called has teaching assistant and class list, which is an array of people in the classroom. The first value in class lists will be the teacher. If has teaching assistant is true, The second value in the class list is the teaching assistant and the remaining values in the class list are the students. If has teaching assistant is false, The second value through the end of the class list are the students. Your job is to return a list of students. You must use object and array de-structuring.
+function getStudents(classroom){
+    let {hasTechingAssistant, classList} = classroom;
+    let teacher, teachingAssistant, students;
+    if(hasTechingAssistant){
+        [teacher, teachingAssistant, ...students] = classList;
+    }else{
+        [teacher, ...students] = classList;
+    }
+    return students;
 }
-clock();
+console.log(
+getStudents({
+    hasTechingAssistant:false,
+    classList: ["Jack","John", "Ben", "Jen", "Ren", "Jackie"],
+})
+)
