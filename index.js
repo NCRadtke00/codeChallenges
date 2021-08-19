@@ -56,52 +56,52 @@
 // console.log(HungerGames.getAvailablity());
 
 // addition to prevChallenge
-//this challenge we'll use inheritance to create a variation on our Book class. Your goal is to create a TechnicalBook class that inherits from the Book class in the previous challenge. This class will also take a title, author, ISBN, and number of copies, but will take a fifth argument, an edition. The TechnicalBook class will also provide a getEdition function which returns the following string. The current version of this book is, followed by the book's edition. You should use a template literal for this phrase.
-class Book {
-  constructor(title, author, ISBN, numCopies) {
-    this.title = title;
-    this.author = author;
-    this.ISBN = ISBN;
-    this.numCopies = numCopies;
-  }
-  get availablity() {
-    return this.getAvailablity();
-  }
-  getAvailablity = function () {
-    if (this.numCopies == 0) {
-      return "Out of Stock";
-    } else if (this.numCopies < 10) {
-      return "Low stock";
-    }
-    return "In stock";
-  };
-  sell(numCopiesSold = 10) {
-    this.numCopies -= numCopiesSold;
-  }
-  restock(numCopiesStocked = 5) {
-    this.numCopies += numCopiesStocked;
-  }
-}
-const HungerGames = new Book("Hunger Games", "Suzanne Collins", 123321, 5);
+// //this challenge we'll use inheritance to create a variation on our Book class. Your goal is to create a TechnicalBook class that inherits from the Book class in the previous challenge. This class will also take a title, author, ISBN, and number of copies, but will take a fifth argument, an edition. The TechnicalBook class will also provide a getEdition function which returns the following string. The current version of this book is, followed by the book's edition. You should use a template literal for this phrase.
+// class Book {
+//   constructor(title, author, ISBN, numCopies) {
+//     this.title = title;
+//     this.author = author;
+//     this.ISBN = ISBN;
+//     this.numCopies = numCopies;
+//   }
+//   get availablity() {
+//     return this.getAvailablity();
+//   }
+//   getAvailablity = function () {
+//     if (this.numCopies == 0) {
+//       return "Out of Stock";
+//     } else if (this.numCopies < 10) {
+//       return "Low stock";
+//     }
+//     return "In stock";
+//   };
+//   sell(numCopiesSold = 10) {
+//     this.numCopies -= numCopiesSold;
+//   }
+//   restock(numCopiesStocked = 5) {
+//     this.numCopies += numCopiesStocked;
+//   }
+// }
+// const HungerGames = new Book("Hunger Games", "Suzanne Collins", 123321, 5);
 
-class TechnicalBook extends Book {
-  constructor(title, author, ISBN, numCopies, edition) {
-    super(title, author, ISBN, numCopies);
-    this.edition = edition;
-  }
-  getEdition() {
-    return `The current version of this book is ${this.edition}.`;
-  }
-}
-const CrackingTheCodingInterview = new TechnicalBook(
-  "Cracking The Coding Interview",
-  "Gayle Laackmann McDowell",
-  1209115,
-  7,
-  "2.3"
-);
-console.log(CrackingTheCodingInterview.availablity);
-console.log(CrackingTheCodingInterview.getEdition());
+// class TechnicalBook extends Book {
+//   constructor(title, author, ISBN, numCopies, edition) {
+//     super(title, author, ISBN, numCopies);
+//     this.edition = edition;
+//   }
+//   getEdition() {
+//     return `The current version of this book is ${this.edition}.`;
+//   }
+// }
+// const CrackingTheCodingInterview = new TechnicalBook(
+//   "Cracking The Coding Interview",
+//   "Gayle Laackmann McDowell",
+//   1209115,
+//   7,
+//   "2.3"
+// );
+// console.log(CrackingTheCodingInterview.availablity);
+// console.log(CrackingTheCodingInterview.getEdition());
 //create a movie object that takes in five arguments. Title, director, genre, release year and rating. The movie prototype should have a function called get overview, which logs the following overview for each film. Movie, a genre film directed by director was released in release here. It received a rating of rating. You can use either class or function syntax to create your prototype. Once you create your movie object, create a few movies to test it out.
 // //function solution
 // function Movie(title, director, genre, releaseYear, rating){
@@ -173,3 +173,15 @@ console.log(CrackingTheCodingInterview.getEdition());
 //   ];
 // }
 // vegetarianMenu(menu);
+
+//In this challenge, you will create a user object that has three properties, username, password, and age. Using JavaScript Symbols, ensure that username and password are private fields on the user character. This means they shouldn't be accessible by calling user.username or user.password.
+const username = Symbol("username");
+const password = Symbol("password");
+
+const user = {
+  [username]: "FancyCat",
+  [password]: "whiskers1",
+  age: 25,
+};
+console.log(user.username);
+console.log(user.password);
