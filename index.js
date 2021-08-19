@@ -29,3 +29,28 @@ console.log(HungerGames.getAvailablity());
 HungerGames.sell(17);
 console.log(HungerGames.getAvailablity());
 //class solution
+class Book {
+    constructor(title, author, ISBN, numCopies){
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.numCopies = numCopies;
+    }
+    get availablity(){
+        return this.getAvailablity();
+    }
+    getAvailablity = function() {
+        if(this.numCopies == 0){
+            return 'Out of Stock';
+        }else if (this.numCopies < 10){
+            return 'Low stock';
+        }
+        return 'In stock';
+    }
+    sell(numCopiesSold = 10) {
+        this.numCopies -= numCopiesSold;
+    }
+    restock(numCopiesStocked = 5){
+        this.numCopies += numCopiesStocked;
+    }
+}
