@@ -187,11 +187,12 @@
 // console.log(user.password);
 
 //in this challenge, you'll create a ticking clock in the document body. The index.html file contains a div with an ID of clock. Using callback functions and DOM manipulation, output a ticking digital clock which displays the current hours, minutes, and seconds.
-function clock(){
-    const clockNode = document.querySelector(#"clock");
-    return setInterval(() =>{
-        let date = new Date();
-        let tick = date.toLocaleDateString();
-        clockNode.textConect = tick;},1000);
+function clock() {
+  const clockNode = document.querySelector("#clock");
+  return setInterval(() => {
+    let date = new Date();
+    let tick = date.toLocaleDateString();
+    clockNode.textConect = tick;
+  }, 1000);
 }
 clock();
