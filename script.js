@@ -227,15 +227,13 @@
 // document.querySelector(`#green`).addEventListener("click", makeBodyGreen);
 // document.querySelector(`#pink`).addEventListener("click", makeBodyPink);
 function changeColor(color) {
-  document.body.style.background = color;
+  return function () {
+    document.body.style.background = color;
+  };
 }
-
-document
-  .querySelector(`#blue`)
-  .addEventListener("click", () => changeColor("#0f62fe"));
-document
-  .querySelector(`#green`)
-  .addEventListener("click", () => changeColor("#42be65"));
-document
-  .querySelector(`#pink`)
-  .addEventListener("click", () => changeColor("#ff7eb6"));
+const bgColorBlue = changeColor("#0f62fe");
+const bgColorGreen = changeColor("#42be65");
+const bgColorPink = changeColor("#ff7eb6");
+document.querySelector(`#blue`).addEventListener("click", bgColorBlue);
+document.querySelector(`#green`).addEventListener("click", bgColorGreen);
+document.querySelector(`#pink`).addEventListener("click", bgColorPink);
