@@ -175,13 +175,23 @@
 // vegetarianMenu(menu);
 
 //In this challenge, you will create a user object that has three properties, username, password, and age. Using JavaScript Symbols, ensure that username and password are private fields on the user character. This means they shouldn't be accessible by calling user.username or user.password.
-const username = Symbol("username");
-const password = Symbol("password");
+// const username = Symbol("username");
+// const password = Symbol("password");
 
-const user = {
-  [username]: "FancyCat",
-  [password]: "whiskers1",
-  age: 25,
-};
-console.log(user.username);
-console.log(user.password);
+// const user = {
+//   [username]: "FancyCat",
+//   [password]: "whiskers1",
+//   age: 25,
+// };
+// console.log(user.username);
+// console.log(user.password);
+
+//in this challenge, you'll create a ticking clock in the document body. The index.html file contains a div with an ID of clock. Using callback functions and DOM manipulation, output a ticking digital clock which displays the current hours, minutes, and seconds.
+function clock(){
+    const clockNode = document.querySelector(#"clock");
+    return setInterval(() =>{
+        let date = new Date();
+        let tick = date.toLocaleDateString();
+        clockNode.textConect = tick;},1000);
+}
+clock();
