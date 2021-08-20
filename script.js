@@ -300,11 +300,12 @@ nextStopButton.addEventListener("click", () => {
 //   }
 //   return total;
 // }
-function numPermutations(letters) {
-  if (letters.length == 1) {
-    return 1;
-  }
-  return letters.length * numPermutations(letters.slice(1));
-}
-console.log(numPermutations("hello"));
-console.log(numPermutations("yellow"));
+// function numPermutations(letters) {
+//   if (letters.length == 1) {
+//     return 1;
+//   }
+//   return letters.length * numPermutations(letters.slice(1));
+// }
+// console.log(numPermutations("hello"));
+// console.log(numPermutations("yellow"));
+//n this challenge, you're building a new component for your space, a brand new social media application that allows you to find friends. This component space user's top five friends. Given some JSON data returned from the random user API, you should dynamically generate image thumbnails for the top five friends. You should use the Fetch API to call the random user API. You can use the URL, https//randomuser.me/api/?result=5. To get data for five users. Your solution should also use async/await.
