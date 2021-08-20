@@ -324,10 +324,12 @@ async function getUsers() {
 getUsers();
 
 //Let's create a function that takes in a blog post title and returns the URL-ified version. To create a URL friendly version of a blog post title, all punctuation must be removed, all letters must be lowercase, and all spaces must be joined by hyphens. You should use a combination of regular expressions and string prototype functions to complete this challenge.
-function urlify(blogTitle) {
-  const punctuation = /[.,/#!$%^&*;:{}=!\-_`~()'"]/g;
-  const blogTitleWithoutPunctuation = blogTitle.replace(punctuation, "");
-  return blogTitleWithoutPunctuation.toLowerCase().trim().replaceAll(" ", "-");
-}
-console.log(urlify("How I Got into Programming!!!"));
-console.log(urlify("I've got a new job :)"));
+// function urlify(blogTitle) {
+//   const punctuation = /[.,/#!$%^&*;:{}=!\-_`~()'"]/g;
+//   const blogTitleWithoutPunctuation = blogTitle.replace(punctuation, "");
+//   return blogTitleWithoutPunctuation.toLowerCase().trim().replaceAll(" ", "-");
+// }
+// console.log(urlify("How I Got into Programming!!!"));
+// console.log(urlify("I've got a new job :)"));
+
+//In this challenge, you'll build a password validator for a signup form, which tests whether or not a user's desired password is strong enough. You must use a regular expression in your solution. If the user's password is strong enough, return the string, your password is valid. Otherwise, return the string, your password is invalid. You must also use a ternary operator to return a Boolean value. Ternary operators check to see if a certain condition has been met. We follow the expression we want to check with a question mark, and if the condition is truthy, it will execute the code following the question mark. The truthy expression is followed by a colon. And if the condition is falsy, it will execute the following code. Here are the criteria which must be met in order for a password to be strong enough. The password must have at least one lowercase letter. The password must have at least one uppercase letter. It must contain one digit and one special character. And it must be at least eight characters long.
