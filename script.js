@@ -324,3 +324,10 @@ async function getUsers() {
 getUsers();
 
 //Let's create a function that takes in a blog post title and returns the URL-ified version. To create a URL friendly version of a blog post title, all punctuation must be removed, all letters must be lowercase, and all spaces must be joined by hyphens. You should use a combination of regular expressions and string prototype functions to complete this challenge.
+function urlify(blogTitle) {
+  const punctuation = /[.,/#!$%^&*;:{}=!\-_`~()'"]/g;
+  const blogTitleWithoutPunctuation = blogTitle.replace(punctuation, "");
+  return blogTitleWithoutPunctuation.toLowerCase().trim().replaceAll(" ", "-");
+}
+console.log(urlify("How I Got into Programming!!!"));
+console.log(urlify("I've got a new job :)"));
