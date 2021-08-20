@@ -187,15 +187,15 @@
 // console.log(user.password);
 
 //in this challenge, you'll create a ticking clock in the document body. The index.html file contains a div with an ID of clock. Using callback functions and DOM manipulation, output a ticking digital clock which displays the current hours, minutes, and seconds.
-// function clock() {
-//   const clockNode = document.querySelector("#clock");
-//   return setInterval(() => {
-//     let date = new Date();
-//     let tick = date.toLocaleDateString();
-//     clockNode.textConect = tick;
-//   }, 1000);
-// }
-// clock();
+function clock() {
+  const clockNode = document.querySelector("#clock");
+  return setInterval(() => {
+    let date = new Date();
+    let tick = date.toLocaleDateString();
+    clockNode.textContent = tick;
+  }, 1000);
+}
+clock();
 //For this challenge, you'll use array and object de-structuring to return a list of students. Create a function called get students, which takes one argument, Classroom classroom will contain a bullion value called has teaching assistant and class list, which is an array of people in the classroom. The first value in class lists will be the teacher. If has teaching assistant is true, The second value in the class list is the teaching assistant and the remaining values in the class list are the students. If has teaching assistant is false, The second value through the end of the class list are the students. Your job is to return a list of students. You must use object and array de-structuring.
 // function getStudents(classroom){
 //     let {hasTechingAssistant, classList} = classroom;
@@ -333,19 +333,19 @@ getUsers();
 // console.log(urlify("I've got a new job :)"));
 
 //In this challenge, you'll build a password validator for a signup form, which tests whether or not a user's desired password is strong enough. You must use a regular expression in your solution. If the user's password is strong enough, return the string, your password is valid. Otherwise, return the string, your password is invalid. You must also use a ternary operator to return a Boolean value. Ternary operators check to see if a certain condition has been met. We follow the expression we want to check with a question mark, and if the condition is truthy, it will execute the code following the question mark. The truthy expression is followed by a colon. And if the condition is falsy, it will execute the following code. Here are the criteria which must be met in order for a password to be strong enough. The password must have at least one lowercase letter. The password must have at least one uppercase letter. It must contain one digit and one special character. And it must be at least eight characters long.
-function checkPassword(password) {
-  let oneLowerCaseLetter = /(?=.+[a-z])/;
-  let oneUpperCaseLetter = /(?=.+[A-Z])/;
-  let oneDigit = /(?=.+[0-9])/;
-  let oneSpecialCharacter = /(?=.+[!@#$%^&*])/;
-  let minimumEightCharacters = /(?=.{8,})/;
-  let isValid =
-    oneLowerCaseLetter.test(password) &&
-    oneUpperCaseLetter.test(password) &&
-    oneDigit.test(password) &&
-    oneSpecialCharacter.test(password) &&
-    minimumEightCharacters.test(password);
-  return isValid ? "Your password is valid" : "Your password is invalid";
-}
-console.log(checkPassword("abc")); //invalid
-console.log(checkPassword("ShawnSpencer1!")); //valid
+// function checkPassword(password) {
+//   let oneLowerCaseLetter = /(?=.+[a-z])/;
+//   let oneUpperCaseLetter = /(?=.+[A-Z])/;
+//   let oneDigit = /(?=.+[0-9])/;
+//   let oneSpecialCharacter = /(?=.+[!@#$%^&*])/;
+//   let minimumEightCharacters = /(?=.{8,})/;
+//   let isValid =
+//     oneLowerCaseLetter.test(password) &&
+//     oneUpperCaseLetter.test(password) &&
+//     oneDigit.test(password) &&
+//     oneSpecialCharacter.test(password) &&
+//     minimumEightCharacters.test(password);
+//   return isValid ? "Your password is valid" : "Your password is invalid";
+// }
+// console.log(checkPassword("abc")); //invalid
+// console.log(checkPassword("914vfreqQ$!")); //valid
