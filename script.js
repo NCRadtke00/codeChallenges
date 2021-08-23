@@ -366,3 +366,4 @@ function FizzBuzz(input) {
 }
 
 console.log(FizzBuzz(15));
+//Reverse an array in javascript 
