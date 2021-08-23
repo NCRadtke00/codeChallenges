@@ -364,6 +364,23 @@ function FizzBuzz(input) {
     }
   }
 }
+FizzBuzz();
 
-console.log(FizzBuzz(15));
-//Reverse an array in javascript 
+//Reverse an array in javascript var myArray = [20, 40, 60, 70, 75, 80, 100];
+
+var myArray = [20, 40, 60, 70, 75, 80, 100];
+console.log(myArray.reverse()); //solution one
+
+function reverseArr(input) {
+  var ret = new Array();
+  for (var i = input.length - 1; i >= 0; i--) {
+    ret.push(input[i]);
+  }
+  return ret;
+} //solution two iterating through for loop pushing the last object of the prevarray into a new array
+var revMyArray = reverseArr(myArray);
+console.log(revMyArray);
+
+var revMyArrayTwo = [].concat(myArray).reverse(); // solution 3 concating the array and then reversering the broken apart array not recommended
+console.log(revMyArrayTwo);
+//could also use .map
