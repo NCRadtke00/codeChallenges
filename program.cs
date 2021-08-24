@@ -104,34 +104,75 @@ namespace Sandbox
         //     }
         // }
         public void CSharpChallengeQuestion(string question) { Console.WriteLine(question); }
-        public abstract class Shape
-        {
-            public abstract double Area();
-        }
-        public class Rectangle : Shape
-        {
-            public double height;
-            public double width;
-            public Rectangle(double Height, double Width)
-            {
-                height = Height;
-                width = Width;
-            }
-            public override double Area()
-            {
-                int area = height * width;
-                return area;
-            }
-        };
-        public class Circle : Shape
-        {
-            public double radius;
-            public override double Area()
-            {
-                int area = radius * radius * Math.PI;
-                return area;
-            }
-        };
+
     }
 }
+// class Inherintance{
+//     public abstract class Shape
+//         {
+//             public abstract double Area();
+//         }
+//         public class Rectangle : Shape
+//         {
+//             public double height;
+//             public double width;
+//             public Rectangle(double Height, double Width)
+//             {
+//                 height = Height;
+//                 width = Width;
+//             }
+//             public override double Area()
+//             {
+//                 int area = height * width;
+//                 return area;
+//             }
+//         };
+//         public class Circle : Shape
+//         {
+//             public double radius;
+//             public override double Area()
+//             {
+//                 int area = radius * radius * Math.PI;
+//                 return area;
+//             }
+//         };
+// }
+namespace Autodealer
+{
+    public static void Main(strings[] args)
+    {
+        Dealership dealership = new Dealership();
+        Automobile car = new Automobile("Chevy", "K-Car", 1985, 275578, 65, "rust", 132.23);
+        dealership.AddAutomobile(car);
+        Console.WriteLine(dealership);
+        dealership.RemoveAutomobile(car);
+        Console.WriteLine(dealership);
 
+    }
+    public class Automobile
+    {
+        private string make;
+        private string model;
+        private int year;
+        private int mileage;
+        private int topSpeed;
+        private string color;
+        private double price;
+    }
+    public class Dealership
+    {
+        List<Automobile> automobiles;
+        public Dealership()
+        {
+            automobiles = new List<Automobile>();
+        }
+        public void AddAutomobile(Automobile automobile)
+        {
+            automobile.Add(automobile);
+        }
+        public void RemoveAutomobile(Automobile automobile)
+        {
+            automobile.Remove(automobile);
+        }
+    }
+}
