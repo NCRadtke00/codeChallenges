@@ -29,21 +29,36 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            //multiply two numbers and return product
+            // //multiply two numbers and return product
             MethodPractice practice = new MethodPractice();
-            int result = practice.MultiplyTwoNumbers(5, 10);
-            Console.WriteLine(result);
+            // int result = practice.MultiplyTwoNumbers(5, 10);
+            string statement = "Xamerin is an excellent example of a mobile technology.";
+            practice.CountLettersX(statement);
         }
     }
     class Sandbox
     {
-        //multiply two numbers and return product
-        public int MultiplyTwoNumbers(int firstNumber, int secondNumber)
+        // //multiply two numbers and return product
+        // public int MultiplyTwoNumbers(int firstNumber, int secondNumber)
+        // {
+        //     int firstNumber = 10;
+        //     int secondNumber = 20;
+        //     int result = firstNumber * secondNumber;
+        //     return result;
+        // }
+        //Create method to count the letter 'x' in a sentence and print the result
+        //"Xamerin is an excellent example of a mobile technology."
+        public void CountLettersX(string phrase)
         {
-            int firstNumber = 10;
-            int secondNumber = 20;
-            int result = firstNumber * secondNumber;
-            return result;
+            int xCounter = 0;
+            for (int i = 0; i < phrase.Length; i++)
+            {
+                if (phrase[i] == 'X' || phrase[i] == 'x')
+                {
+                    xCounter++;
+                }
+            }
+            Console.WriteLine(xCounter);
         }
     }
 }
