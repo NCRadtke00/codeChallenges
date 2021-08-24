@@ -4,40 +4,37 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//FizzBuzz
-//Write a short program that prints each number from 1 to 100 on a new line. For each multiple of 3, print "Fizz" instead of the number. For each multiple of 5, print "Buzz" instead of the number. For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
-// class Solutions
-// {
-//     static void FizzBuzz(String[] args)
-//     {
 
-//         for (int i = 1; i <= 100; i++)
-//         {
-
-//             string result = (i % 3 == 0 && i % 5 == 0) ? "FizzBuzz" : (i % 5 == 0) ? "Buzz" :
-//                        (i % 3 == 0) ? "Fizz" : i.ToString();
-//             Console.WriteLine(result);
-//         }
-
-//     }
-// }
-
-//multiply two numbers and return product
 namespace Sandbox
 {
+    // class Solutions
+    // {//FizzBuzz
+    //  //Write a short program that prints each number from 1 to 100 on a new line. For each multiple of 3, print "Fizz" instead of the number. For each multiple of 5, print "Buzz" instead of the number. For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+    //     static void FizzBuzz(String[] args)
+    //     {
+
+    //         for (int i = 1; i <= 100; i++)
+    //         {
+
+    //             string result = (i % 3 == 0 && i % 5 == 0) ? "FizzBuzz" : (i % 5 == 0) ? "Buzz" :
+    //                        (i % 3 == 0) ? "Fizz" : i.ToString();
+    //             Console.WriteLine(result);
+    //         }
+
+    //     }
+    // }
     class Porgram
     {
         static void Main(string[] args)
         {
             MethodPractice practice = new MethodPractice();
-            // //multiply two numbers and return product
-
+            // multiply two numbers and return product
             // int result = practice.MultiplyTwoNumbers(5, 10);
             // string statement = "Xamerin is an excellent example of a mobile technology.";
             // practice.CountLettersX(statement);
             // practice.CheckAge(15);
+            // practice.EvenOrOddNum(88);
             practice.CSharpChallengeQuestion("would you like another problem to solve?");
-            practice.EvenOrOddNum(88);
         }
     }
     class Sandbox
@@ -91,22 +88,50 @@ namespace Sandbox
         //     }
 
         // }
+        // public void EvenOrOddNum(int n)
+        // {
+        //     //is number n even or odd
+        //     for (int i = 0; i < 100; i++)
+        //     {
+        //         if (i % 2 == 0)
+        //         {
+        //             Console.WriteLine(i + "is an even number.");
+        //         }
+        //         else
+        //         {
+        //             Console.WriteLine(i + "is an odd number.");
+        //         }
+        //     }
+        // }
         public void CSharpChallengeQuestion(string question) { Console.WriteLine(question); }
-        public void EvenOrOddNum(int num)
+        public abstract class Shape
         {
-            for (int i = 0; i < 100; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i + "is an even number,.");
-                }
-                else
-                {
-                    Console.WriteLine(i + "is an odd number.");
-                }
-            }
+            public abstract double Area();
         }
+        public class Rectangle : Shape
+        {
+            public double height;
+            public double width;
+            public Rectangle(double Height, double Width)
+            {
+                height = Height;
+                width = Width;
+            }
+            public override double Area()
+            {
+                int area = height * width;
+                return area;
+            }
+        };
+        public class Circle : Shape
+        {
+            public double radius;
+            public override double Area()
+            {
+                int area = radius * radius * Math.PI;
+                return area;
+            }
+        };
     }
 }
 
-//multiply two numbers and return product
