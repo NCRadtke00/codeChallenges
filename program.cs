@@ -29,12 +29,15 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            // //multiply two numbers and return product
             MethodPractice practice = new MethodPractice();
+            // //multiply two numbers and return product
+
             // int result = practice.MultiplyTwoNumbers(5, 10);
             // string statement = "Xamerin is an excellent example of a mobile technology.";
             // practice.CountLettersX(statement);
-            practice.CheckAge(15);
+            // practice.CheckAge(15);
+            practice.CSharpChallengeQuestion("would you like another problem to solve?");
+            practice.EvenOrOddNum(88);
         }
     }
     class Sandbox
@@ -62,31 +65,46 @@ namespace Sandbox
         //     Console.WriteLine(xCounter);
         // }
 
-        public void CheckAge(int age)
-        {
+        // public void CheckAge(int age)
+        // {
 
-            //Check to see if user can legally drive
-            int userAge;
-            int legalDrivingAge = 16;
-            if (age > 0)
+        //     //Check to see if user can legally drive
+        //     int userAge;
+        //     int legalDrivingAge = 16;
+        //     if (age > 0)
+        //     {
+        //         age = userAge;
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine("Please enter your age:");
+        //         string userIntput = Console.ReadLine();
+        //         userAge = Int32.Parse(userIntput);
+        //         if (userAge <= legalDrivingAge)
+        //         {
+        //             Console.WriteLine("You are the legal age to drive, Buckle Up BuckARoo!");
+        //         }
+        //         else
+        //         {
+        //             Console.WriteLine("You are too young to drive buckaroo!");
+        //         }
+        //     }
+
+        // }
+        public void CSharpChallengeQuestion(string question) { Console.WriteLine(question); }
+        public void EvenOrOddNum(int num)
+        {
+            for (int i = 0; i < 100; i++)
             {
-                age = userAge;
-            }
-            else
-            {
-                Console.WriteLine("Please enter your age:");
-                string userIntput = Console.ReadLine();
-                userAge = Int32.Parse(userIntput);
-                if (userAge <= legalDrivingAge)
+                if (i % 2 == 0)
                 {
-                    Console.WriteLine("You are the legal age to drive, Buckle Up BuckARoo!");
+                    Console.WriteLine(i + "is an even number,.");
                 }
                 else
                 {
-                    Console.WriteLine("You are too young to drive buckaroo!");
+                    Console.WriteLine(i + "is an odd number.");
                 }
             }
-
         }
     }
 }
