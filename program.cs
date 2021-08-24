@@ -179,33 +179,39 @@ namespace Sandbox
 //         }
 //     }
 // }
-namespace CapitalizeLetter
+// namespace CapitalizeLetter
+// {
+//     //return the first letter capitilized for every word in a pharse 
+//     public static void Main(strings[] args)
+//     {
+//         CapitalizeLetter capitalizeLetter = new CapitalizeLetter();
+//         capitalizeLetter.CapFirstLetterEachWord("hellow world mic check one two");
+//      }
+//     public string CapFirstLetterEachWord(string word)
+//     {
+//         string newWord = "";
+//         newWord += word[0].ToString().ToUpper();
+//         for (int i = 1; i < word.Length; i++)
+//         {
+//             if (word[i] == ' ')
+//             {
+//                 newWord += ' ';
+//                 newWord += word[i + 1].ToString().ToUpper();
+//                 i++;
+//             }
+//             else
+//             {
+//                 newWord += word[i].ToString();
+//             }
+//             return newWord;
+//         }
+//     }
+
+// }
+namespace nextQuestion
 {
-    //return the first letter capitilized for every word in a pharse 
-    public static void Main(strings[] args)
-    {
-        CapitalizeLetter capitalizeLetter = new CapitalizeLetter();
-        capitalizeLetter.CapFirstLetterEachWord("hellow world mic check one two");
-     }
-    public string CapFirstLetterEachWord(string word)
-    {
-        string newWord = "";
-        newWord += word[0].ToString().ToUpper();
-        for (int i = 1; i < word.Length; i++)
-        {
-            if (word[i] == ' ')
-            {
-                newWord += ' ';
-                newWord += word[i + 1].ToString().ToUpper();
-                i++;
-            }
-            else
-            {
-                newWord += word[i].ToString();
-            }
-            return newWord;
-        }
-    }
+    //
+    public static void Main(strings[] args) { }
 
 }
 namespace nextQuestion
