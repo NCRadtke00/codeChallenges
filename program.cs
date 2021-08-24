@@ -32,8 +32,9 @@ namespace Sandbox
             // //multiply two numbers and return product
             MethodPractice practice = new MethodPractice();
             // int result = practice.MultiplyTwoNumbers(5, 10);
-            string statement = "Xamerin is an excellent example of a mobile technology.";
-            practice.CountLettersX(statement);
+            // string statement = "Xamerin is an excellent example of a mobile technology.";
+            // practice.CountLettersX(statement);
+            practice.CheckAge(15);
         }
     }
     class Sandbox
@@ -46,19 +47,46 @@ namespace Sandbox
         //     int result = firstNumber * secondNumber;
         //     return result;
         // }
-        //Create method to count the letter 'x' in a sentence and print the result
-        //"Xamerin is an excellent example of a mobile technology."
-        public void CountLettersX(string phrase)
+        // //Create method to count the letter 'x' in a sentence and print the result
+        // //"Xamerin is an excellent example of a mobile technology."
+        // public void CountLettersX(string phrase)
+        // {
+        //     int xCounter = 0;
+        //     for (int i = 0; i < phrase.Length; i++)
+        //     {
+        //         if (phrase[i] == 'X' || phrase[i] == 'x')
+        //         {
+        //             xCounter++;
+        //         }
+        //     }
+        //     Console.WriteLine(xCounter);
+        // }
+
+        public void CheckAge(int age)
         {
-            int xCounter = 0;
-            for (int i = 0; i < phrase.Length; i++)
+
+            //Check to see if user can legally drive
+            int userAge;
+            int legalDrivingAge = 16;
+            if (age > 0)
             {
-                if (phrase[i] == 'X' || phrase[i] == 'x')
+                age = userAge;
+            }
+            else
+            {
+                Console.WriteLine("Please enter your age:");
+                string userIntput = Console.ReadLine();
+                userAge = Int32.Parse(userIntput);
+                if (userAge <= legalDrivingAge)
                 {
-                    xCounter++;
+                    Console.WriteLine("You are the legal age to drive, Buckle Up BuckARoo!");
+                }
+                else
+                {
+                    Console.WriteLine("You are too young to drive buckaroo!");
                 }
             }
-            Console.WriteLine(xCounter);
+
         }
     }
 }
