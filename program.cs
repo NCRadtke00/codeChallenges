@@ -251,3 +251,18 @@ namespace Lucky
         }
     }
 }
+//convert temp c to f
+namespace CtoF
+{
+    public static void Main(strings[] args)
+    {
+        double c = 30;
+        double f = CtoF.ConvertCtoF(c);
+        Console.WriteLine(" C temp = {0} , F temp = {0}", c, f);
+    }
+    public static double ConvertCtoF(double c)
+    {
+        double f = (c * 9 / 5) + 32;
+        return f;
+    }
+}
