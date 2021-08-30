@@ -1,5 +1,7 @@
 //  In this challenge you'll be developing an inventory application for a bookstore. You need to create a book class, which provides information about different books in the store. Each book will have a title, author, ISBN, and keep track of the number of available copies. You'll need a way to get each book's availability. If there aren't any copies of the book left, the function should return out of stock. If there are less than 10 copies, the function should return low stock. Otherwise the function should return in stock. You'll also need a function for selling a book. This will take the number of copies sold and subtract it from the total number of copies. If no argument is passed, we can default the number of copies to sell to one. Lastly, you'll want a restock function, which takes in a number of copies to restock and adds it to the total number of copies. If no argument is passed, we can default the restock number to five. You should use JavaScript's class keyword as well as a getter function for the availability method.
 
+const { I } = require("caniuse-lite/data/agents");
+
 // // function solution
 // function (title, author, ISBN, numCopies){
 //     this.title = title;
@@ -407,6 +409,9 @@ function getMaxValue (arrary[]) {
   maxValue = getMaxValue ([100,99,50,49,101])
   console.log("this is the max value" + maxValue )
   
+
+
+  /////////////////////////////////////////////////////////////////////////////////////
   //Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition. The binary number returned should be a string. 
   (A1)
   function addBinary(a,b) {
@@ -434,4 +439,24 @@ function highAndLow(numbers){
 function highAndLow(numbers){
   numbers = numbers.split('');
   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+
+//Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+function toCamelCase(str){
+  return str.split(/[,_-]+/).
+  map((s,i)=> i !== 0 ? s.charAt(0).
+  toUpperCase() + s.slice(1) : s).join('');
+}
+function toCamelCase(str){
+  str = str.split('');
+  return str.map(function(el, i){
+    if(el == '-' || el == '_'){
+      el = str[i+1].toUpperCase();
+      str.splice(i+1, 1);
+    }
+    return el;
+  }).join('');
+}
+function toCamelCase(str){
+  return str.replace(/[-_](.)/g, (_,c)=> c.toUpperCase());
 }
