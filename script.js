@@ -407,4 +407,14 @@ function getMaxValue (arrary[]) {
   maxValue = getMaxValue ([100,99,50,49,101])
   console.log("this is the max value" + maxValue )
   
-  
+  //Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition. The binary number returned should be a string. 
+  (A1)
+  function addBinary(a,b) {
+  var a, b;
+  var c = a + b;
+  return c.toString(2);
+  }
+  (A2)
+  function addBinary(a,b){
+    return (a+b).toString(2)
+  }
