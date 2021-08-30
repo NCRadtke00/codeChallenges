@@ -460,3 +460,20 @@ function toCamelCase(str){
 function toCamelCase(str){
   return str.replace(/[-_](.)/g, (_,c)=> c.toUpperCase());
 }
+
+//					strings and arrays 
+	//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
+ // It should look like this:Sam Harris => S.H;
+  
+  function abbrevName(name){
+    var nam = name.split(' ');
+    return num[0].charAt(0).toUpperCase()+ '.' + nam[1].charAt(0).toUpperCase();
+  }
+  function abbrevName(name){
+    var nameArray = name.split(" ");
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+  }
+  function abbrevName(name){
+    return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
+  }
+  
