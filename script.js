@@ -384,3 +384,27 @@ console.log(revMyArray);
 var revMyArrayTwo = [].concat(myArray).reverse(); // solution 3 concating the array and then reversering the broken apart array not recommended
 console.log(revMyArrayTwo);
 //could also use .map
+
+
+
+//highest value in the array 
+function getMaxValue (arrary[]) {
+  if(arrary[] === null){
+      return console.log ("Arrary cannot be null, must have value")
+  } if else  (arrary.length === 0){
+      return console.log ("Arrary cannot be empty, must have value")
+      //throw new error("arrary cannot be empty, must have value")
+  }
+  let maxValue = arrary[0];
+  for (let i = 0; i < arrary.length; i++){
+      if (maxValue =< arrary[i]){
+          maxValue = arrary[i] 
+      }
+  }
+  return maxValue
+  }
+  //2000
+  maxValue = getMaxValue ([100,99,50,49,101])
+  console.log("this is the max value" + maxValue )
+  
+  
