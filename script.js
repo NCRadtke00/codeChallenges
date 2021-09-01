@@ -526,3 +526,14 @@ function digital_root(n) {
 }
 console.log(digital_root(12)) //3 checks out //3
 console.log(digital_root(13)) //4 checks out //4
+
+//another users answer I think works but isn't as clean
+function digital_root(n) {
+  let result = 0;
+  String(n).split('').map(num =>{
+	result += Number(num);
+});
+  return result > 10? digital_root(result) : result;
+}  // this would take a lot longer to get the same result stinks.
+
+//js challenge create hidden code. take any string and replace every letter with its position in the alphabet. If anything in the text isn't a letter, ignore it and don't return it. //"Hi!" => 89
