@@ -537,3 +537,7 @@ function digital_root(n) {
 }  // this would take a lot longer to get the same result stinks.
 
 //js challenge create hidden code. take any string and replace every letter with its position in the alphabet. If anything in the text isn't a letter, ignore it and don't return it. //"Hi!" => 89
+function alphabetPosition(text) {
+  return text.toUpperCase().match(/[a-z]/gi).map((c) => c.charCodeAt() - 64).join(' ');
+}
+console.log(alphabetPosition("Hi, I'm Nick!"));// HYB
