@@ -499,4 +499,7 @@ function toCamelCase(str){
   //A smiley face can have a nose but it does not have to. 
   //Valid characters for a nose are - or ~
   //Every smiling face must have a smiling mouth that should be marked with either ) or D .  No additional characters are allowed except for those mentioned.
-  
+  function CountSmileyFaces(arr){
+    const matches = arr.join('').match(/[;:][-~]?[(D)]/g);
+    return matches ? matches.length : 0;
+  }
