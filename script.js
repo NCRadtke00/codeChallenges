@@ -521,3 +521,8 @@ var countBits = function(n) {
 console.log(countBits(174)); // code works!
 
 //Digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+function digital_root(n) {
+  return ( n - 1) % 9 + 1 ;
+}
+console.log(digital_root(12)) //3 checks out //3
+console.log(digital_root(13)) //4 checks out //4
