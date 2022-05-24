@@ -15,7 +15,14 @@ public class Program
         int[] temp = new int[nums.Length]; // temp array that contains the expected length
         int j = 0; // to store index of the next unique value
                    //loop through the array
-
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+            //if the current value of i is not equal to the next value, store i
+            if (nums[i] != nums[i + 1])
+            {
+                temp[j++] = nums[i];
+            }
+        }
         return 0;
     }
 }
