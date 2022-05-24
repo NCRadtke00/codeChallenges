@@ -35,7 +35,10 @@ function readLine() {
 
 function birthdayCakeCandles(candles) {
     // Write your code here
-
+    let max = Math.max(...candles);
+    //using modern js i want to use Math.max with the spread operator to get maximum value of the array
+    return candles.filter(item => item === max).length;
+    //then using the filter method ill return an array with only the max values and finally return the length of that filtered array
 }
 
 function main() {
