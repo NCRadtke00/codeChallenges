@@ -216,30 +216,7 @@ clock();
 //     classList: ["Jack","John", "Ben", "Jen", "Ren", "Jackie"],
 // })
 // )
-//we'll use closures to create three buttons. Each button will represent a different color and we'll change the background color of the document body to the color value. Using a closure, create a function called change color that accepts a color value. When the button is clicked, the closure should be invoked and the body background color should be updated.
-// function makeBodyBlue() {
-//   document.body.style.background = "#0f62fe";
-// }
-// function makeBodyGreen() {
-//   document.body.style.background = "#42be65";
-// }
-// function makeBodyPink() {
-//   document.body.style.background = "#ff7eb6";
-// }
-// document.querySelector(`#blue`).addEventListener("click", makeBodyBlue);
-// document.querySelector(`#green`).addEventListener("click", makeBodyGreen);
-// document.querySelector(`#pink`).addEventListener("click", makeBodyPink);
-function changeColor(color) {
-  return function () {
-    document.body.style.background = color;
-  };
-}
-const bgColorBlue = changeColor("#0f62fe");
-const bgColorGreen = changeColor("#42be65");
-const bgColorPink = changeColor("#ff7eb6");
-document.querySelector(`#blue`).addEventListener("click", bgColorBlue);
-document.querySelector(`#green`).addEventListener("click", bgColorGreen);
-document.querySelector(`#pink`).addEventListener("click", bgColorPink);
+
 // you'll be using the array reduce function to calculate the total bill from a trip to the coffee shop with your friends. Each person has ordered some number of coffees and you offer to pay the entire bill. Given an array of integers where each value is greater than zero, calculate the total price of all coffees. Each coffee costs $1.25. You should return your answer in the following format. The total bill is, followed by the total. You should use template literals for your return value. Template literals also known as template strings allow you to combine JavaScript expressions and strings into one. Where you previously had to use the plus sign to concatenate strings with values you can now use back ticks. And where you need to evaluate variable or expression, you can surround it with a dollar sign and curly brackets.
 
 // function coffeeDate(coffeeArr) {
@@ -391,129 +368,131 @@ console.log(revMyArrayTwo);
 
 
 //highest value in the array 
-function getMaxValue (arrary[]) {
-  if(arrary[] === null){
-      return console.log ("Arrary cannot be null, must have value")
-  } if else  (arrary.length === 0){
-      return console.log ("Arrary cannot be empty, must have value")
-      //throw new error("arrary cannot be empty, must have value")
+function getMaxValue(arrary[]) {
+  if (arrary[] === null) {
+    return console.log("Arrary cannot be null, must have value")
+  } if else (arrary.length === 0){
+    return console.log("Arrary cannot be empty, must have value")
+    //throw new error("arrary cannot be empty, must have value")
   }
   let maxValue = arrary[0];
-  for (let i = 0; i < arrary.length; i++){
-      if (maxValue =< arrary[i]){
-          maxValue = arrary[i] 
-      }
+  for (let i = 0; i < arrary.length; i++) {
+    if (maxValue = < arrary[i]) {
+      maxValue = arrary[i]
+    }
   }
   return maxValue
-  }
-  //2000
-  maxValue = getMaxValue ([100,99,50,49,101])
-  console.log("this is the max value" + maxValue )
-  
+}
+//2000
+maxValue = getMaxValue([100, 99, 50, 49, 101])
+console.log("this is the max value" + maxValue)
+
 
 
   /////////////////////////////////////////////////////////////////////////////////////
   //Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition. The binary number returned should be a string. 
   (A1)
-  function addBinary(a,b) {
+function addBinary(a, b) {
   var a, b;
   var c = a + b;
   return c.toString(2);
-  }
-  (A2)
-  function addBinary(a,b){
-    return (a+b).toString(2)
-  }
+}
+(A2)
+function addBinary(a, b) {
+  return (a + b).toString(2)
+}
 
-  //	In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+//	In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 //highAndLow("1 2 3 4 5");  // return "5 1"
 //highAndLow("1 2 -3 4 5"); // return "5 -3"
 //highAndLow("1 9 3 4 -5"); // return "9 -5"
 //Notes:
 //All numbers are valid Int32, no need to validate them. There will always be at least one number in the input string. Output string must be two numbers separated by a single space, and highest number is first.
 (A1)
-function highAndLow(numbers){
+function highAndLow(numbers) {
   numbers = numbers.split('').map(Number);
-  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0,numbers);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
 }
 (A2)
-function highAndLow(numbers){
+function highAndLow(numbers) {
   numbers = numbers.split('');
   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
 
 //Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
-function toCamelCase(str){
+function toCamelCase(str) {
   return str.split(/[,_-]+/).
-  map((s,i)=> i !== 0 ? s.charAt(0).
-  toUpperCase() + s.slice(1) : s).join('');
+    map((s, i) => i !== 0 ? s.charAt(0).
+      toUpperCase() + s.slice(1) : s).join('');
 }
-function toCamelCase(str){
+function toCamelCase(str) {
   str = str.split('');
-  return str.map(function(el, i){
-    if(el == '-' || el == '_'){
-      el = str[i+1].toUpperCase();
-      str.splice(i+1, 1);
+  return str.map(function (el, i) {
+    if (el == '-' || el == '_') {
+      el = str[i + 1].toUpperCase();
+      str.splice(i + 1, 1);
     }
     return el;
   }).join('');
 }
-function toCamelCase(str){
-  return str.replace(/[-_](.)/g, (_,c)=> c.toUpperCase());
+function toCamelCase(str) {
+  return str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
 }
 
 //					strings and arrays 
-	//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
- // It should look like this:Sam Harris => S.H;
-  
-  function abbrevName(name){
-    var nam = name.split(' ');
-    return num[0].charAt(0).toUpperCase()+ '.' + nam[1].charAt(0).toUpperCase();
-  }
-  function abbrevName(name){
-    var nameArray = name.split(" ");
-    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
-  }
-  function abbrevName(name){
-    return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
-  }
-  
+//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
+// It should look like this:Sam Harris => S.H;
 
-  
-	//Define a function that takes one integer argument and returns logical value true or false depending on if the integer is a prime. Per Wikipedia, a prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
-  //Requirements
- // You can assume you will be given an integer input.
- // You can not assume that the integer will be only positive. You may be given negative numbers as well (or 0).
- // NOTE on performance: There are no fancy optimizations required, but still the most trivial solutions might time out. Numbers go up to 2^31 (or similar, depends on language version). Looping all the way up to n, or n/2, will be too slow.
-  
-  function isPrime(num) {
-    if ( num < 2) return false;
-    for ( var i=2; i < num; i++){
-      if ( num % i ==0) {
-        return false;}}
-    return true;
-  }
-  
-	//Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
-  //Rules for a smiling face: Each smiley face must contain a valid pair of eyes.
-  // Eyes can be marked as : or ;
-  //A smiley face can have a nose but it does not have to. 
-  //Valid characters for a nose are - or ~
-  //Every smiling face must have a smiling mouth that should be marked with either ) or D .  No additional characters are allowed except for those mentioned.
-  function CountSmileyFaces(arr){
-    const matches = arr.join('').match(/[;:][-~]?[(D)]/g);
-    return matches ? matches.length : 0;
-  }
+function abbrevName(name) {
+  var nam = name.split(' ');
+  return num[0].charAt(0).toUpperCase() + '.' + nam[1].charAt(0).toUpperCase();
+}
+function abbrevName(name) {
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
+function abbrevName(name) {
+  return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
+}
 
 
-  //	Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+//Define a function that takes one integer argument and returns logical value true or false depending on if the integer is a prime. Per Wikipedia, a prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+//Requirements
+// You can assume you will be given an integer input.
+// You can not assume that the integer will be only positive. You may be given negative numbers as well (or 0).
+// NOTE on performance: There are no fancy optimizations required, but still the most trivial solutions might time out. Numbers go up to 2^31 (or similar, depends on language version). Looping all the way up to n, or n/2, will be too slow.
+
+function isPrime(num) {
+  if (num < 2) return false;
+  for (var i = 2; i < num; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+//Rules for a smiling face: Each smiley face must contain a valid pair of eyes.
+// Eyes can be marked as : or ;
+//A smiley face can have a nose but it does not have to. 
+//Valid characters for a nose are - or ~
+//Every smiling face must have a smiling mouth that should be marked with either ) or D .  No additional characters are allowed except for those mentioned.
+function CountSmileyFaces(arr) {
+  const matches = arr.join('').match(/[;:][-~]?[(D)]/g);
+  return matches ? matches.length : 0;
+}
+
+
+//	Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
 //Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
-var countBits = function(n) {
-  var bits =[];
+var countBits = function (n) {
+  var bits = [];
   var count = 0;
   bits = n.toString(2).split('');
-  for (var i=0; i <bits.length;i++){
-    if(bits[i] == 1){
+  for (var i = 0; i < bits.length; i++) {
+    if (bits[i] == 1) {
       count++;
     }
   }
@@ -523,7 +502,7 @@ console.log(countBits(174)); // code works!
 
 //Digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
 function digital_root(n) {
-  return ( n - 1) % 9 + 1 ;
+  return (n - 1) % 9 + 1;
 }
 console.log(digital_root(12)) //3 checks out //3
 console.log(digital_root(13)) //4 checks out //4
@@ -531,10 +510,10 @@ console.log(digital_root(13)) //4 checks out //4
 //another users answer I think works but isn't as clean
 function digital_root(n) {
   let result = 0;
-  String(n).split('').map(num =>{
-	result += Number(num);
-});
-  return result > 10? digital_root(result) : result;
+  String(n).split('').map(num => {
+    result += Number(num);
+  });
+  return result > 10 ? digital_root(result) : result;
 }  // this would take a lot longer to get the same result stinks.
 
 //js challenge create hidden code. take any string and replace every letter with its position in the alphabet. If anything in the text isn't a letter, ignore it and don't return it. //"Hi!" => 89
