@@ -1,2 +1,12 @@
 # codeChallenges
-CodeingChallenges, C#, JavaScript, SQL, ect...
+
+- Coding Challenges
+
+# Technology's
+
+> C#
+> JavaScript
+> SQL
+> HTML
+> TypeScript
+> Node
