@@ -23,6 +23,13 @@ public class Program
                 temp[j++] = nums[i];
             }
         }
-        return 0;
+        //store the last value regardless 
+        temp[j++] = nums[nums.Length - 1];
+        //"fix" original arr nums
+        for (int i = 0; i < j; i++)
+        {
+            nums[i] = temp[i];
+        }
+        return j;
     }
 }
