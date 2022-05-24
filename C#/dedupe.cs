@@ -12,7 +12,11 @@ public class Program
     }
     private static int removeDuplicates(int[] nums)
     {
-
+        //if array was unknown we should check if array is empty or only has 1 object/value/element inside
+        if (nums.Length == 0 || nums.Length == 1)
+        {
+            return nums.Length;
+        }
         //second solution without 2nd array
         int j = 0; // store index of next value
         for (int i = 0; i < nums.Length - 1; i++)
